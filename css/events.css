@@ -1,0 +1,96 @@
+
+.logo{
+    max-width: 150px;
+    max-height: -70px;
+    margin-left: 0px;
+    
+  }
+
+
+
+
+.events{
+    margin-top: 3rem;
+}
+
+.events__container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.event{
+    background: var(--color-bg-1);
+    text-align: center;
+    /* border: 1px solid transparent; */
+    transition: var(--transition);
+    border-radius: 15px;
+}
+
+.event:hover{
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.3);
+  background: var(--cat-hover);
+}
+
+.event__info{
+    padding: 2rem;
+}
+
+.event__info p{
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+.event {
+    background-color: transparent;
+    height: 400px;
+}
+
+.event img{
+    object-fit: cover;
+}
+  
+.event-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+.event:hover .event-inner {
+    transform: rotateY(180deg);
+}
+  
+.event-front, .event-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.event-back{
+    transform: rotateY(180deg);
+}
+
+@media screen and (max-width: 1024px){
+    .events__container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .events__container{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+}
+
+.mail-css:hover{
+    text-decoration: underline;
+  }
+
